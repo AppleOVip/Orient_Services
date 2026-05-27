@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الخدمات الرقمية | Digital Agency</title>
+    
+    <!-- ملف الـ CSS الخاص بيك (لأي إضافات خارجية) -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- تشغيل Tailwind CSS عبر الـ CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- إعدادات Tailwind (الألوان والـ Container) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                // تظبيط الكونتينر عشان يكون متمركز وليه مسافات جانبية
+                container: {
+                    center: true,
+                    padding: '1.5rem',
+                },
+                extend: {
+                    colors: {
+                        primary: '#4f46e5',   // Indigo 600
+                        accent: '#0d9488',    // Teal 600
+                        dark: '#0f172a',      // Slate 900 (للنصوص الأساسية)
+                        light: '#f8fafc',     // Slate 50 (للخلفيات)
+                    },
+                    fontFamily: {
+                        // يفضل تستخدم خط زي Cairo أو Tajawal من Google Fonts
+                        sans: ['Cairo', 'sans-serif'], 
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-light text-dark font-sans antialiased text-right">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm">
+        <!-- استخدام container هنا بيحجم المحتوى في النص -->
+        <div class="container py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-primary">اللوجو.</a>
+            <ul class="flex gap-6">
+                <li><a href="#services" class="hover:text-accent transition">خدماتنا</a></li>
+                <li><a href="#about" class="hover:text-accent transition">من نحن</a></li>
+                <li><a href="#contact" class="hover:text-accent transition">اتصل بنا</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="container py-20 text-center">
+        <h1 class="text-5xl font-bold mb-6 text-dark">نحول أفكارك إلى واقع <span class="text-primary">رقمي</span></h1>
+        <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">نقدم حلولاً متكاملة في تصميم المواقع والتسويق الإلكتروني لضمان نمو أعمالك بشكل احترافي.</p>
+        <button class="bg-primary hover:bg-accent text-white px-8 py-3 rounded-lg font-bold transition duration-300">
+            ابدأ مشروعك الآن
+        </button>
+    </header>
+
+    <!-- Services Section (هنا هيجي شغل الـ JS) -->
+    <section id="services" class="bg-white py-20">
+        <div class="container">
+            <h2 class="text-3xl font-bold text-center mb-12">خدماتنا المميزة</h2>
+            <!-- الـ Grid ده هو اللي الـ JS هيرمي جواه كروت الخدمات -->
+            <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- الكروت هتتولد هنا ديناميكياً -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ربط ملف الجافاسكريبت -->
+    <script src="js/main.js"></script>
+</body>
+</html>
