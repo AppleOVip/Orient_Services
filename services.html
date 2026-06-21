@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth scroll-pt-24">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Orient</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                container: {
+                    center: true,
+                    padding: '1.5rem',
+                },
+                extend: {
+                    colors: {
+                        primary: '#4f46e5',   // Indigo 600
+                        accent: '#0d9488',    // Teal 600
+                        dark: '#0f172a',      // Slate 900
+                        light: '#f8fafc',     // Slate 50
+                    },
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'], 
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-light text-dark font-sans antialiased">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container py-4 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-black text-primary tracking-tighter">Orient<span class="text-accent">.</span></a>
+            
+            <ul class="hidden md:flex gap-8 font-semibold items-center">
+                <li><a href="index.html" class="hover:text-primary transition duration-300">Home</a></li>
+                <li><a href="about.html" class="hover:text-primary transition duration-300">About Us</a></li>
+                <li><a href="services.html" class="text-primary transition duration-300">Services</a></li>
+                <li><a href="about.html#contact-section" class="hover:text-primary transition duration-300">Contact Us</a></li>
+                <li><a href="refund.html" class="hover:text-primary transition duration-300">Refund Policy</a></li>
+                <li><a href="terms.html" class="hover:text-primary transition duration-300">Terms & Conditions</a></li>
+                
+                <!-- Cart Icon -->
+                <li>
+                    <button id="cart-open-btn" class="relative p-2 text-dark hover:text-primary transition duration-300 ml-4 group">
+                        <svg class="w-6 h-6 transform group-hover:scale-110 transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        <span id="cart-badge" class="absolute top-0 right-0 bg-accent text-white text-[10px] font-bold rounded-full w-5 h-5 flex items-center justify-center translate-x-1 -translate-y-1 scale-0 transition-transform duration-300 shadow-sm border-2 border-white">0</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="py-20 bg-gray-50 border-b border-gray-100 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-tr from-primary/5 to-accent/5 opacity-50 blur-3xl rounded-full"></div>
+        <div class="container text-center relative z-10">
+            <h1 class="text-5xl lg:text-7xl font-bold text-dark mb-6 leading-tight">Our Services Store</h1>
+            <p class="text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">Browse our individual services or choose a comprehensive package to supercharge your business.</p>
+        </div>
+    </section>
+
+    <!-- Individual Services Store -->
+    <section class="py-24 bg-white">
+        <div class="container">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-dark mb-4">Individual Services</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto text-lg">Pick and choose exactly what your business needs right now.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service 1 -->
+                <div class="bg-light p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition duration-300 flex flex-col group">
+                    <div class="bg-gray-100 rounded-2xl h-56 mb-8 flex items-center justify-center p-6">
+                        <img src="assets/services_images/undraw_server-status_7viz.svg" alt="Domain & Hosting" class="h-full object-contain group-hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-3">Domain & Hosting</h3>
+                    <p class="text-gray-600 mb-8 leading-relaxed flex-grow">Secure your brand's online identity with premium domain registration and ultra-fast, secure cloud hosting.</p>
+                    <div class="flex items-center justify-between mt-auto">
+                        <div class="text-3xl font-black text-primary">1500 <span class="text-sm font-normal text-gray-500">EGP/yr</span></div>
+                        <button onclick="addToCart('domain-hosting', 'Domain & Hosting', 1500)" class="bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-xl font-bold transition duration-300 shadow-md">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-light p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition duration-300 flex flex-col group">
+                    <div class="bg-gray-100 rounded-2xl h-56 mb-8 flex items-center justify-center p-6">
+                        <img src="assets/services_images/undraw_design-tools_wgpz.svg" alt="Logo & Ad Posters" class="h-full object-contain group-hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-3">Logo & Ad Posters</h3>
+                    <p class="text-gray-600 mb-8 leading-relaxed flex-grow">Professional logo design and creative poster concepts tailored for your upcoming advertising campaigns.</p>
+                    <div class="flex items-center justify-between mt-auto">
+                        <div class="text-3xl font-black text-primary">2000 <span class="text-sm font-normal text-gray-500">EGP</span></div>
+                        <button onclick="addToCart('logo-posters', 'Logo & Ad Posters', 2000)" class="bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-xl font-bold transition duration-300 shadow-md">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-light p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition duration-300 flex flex-col group">
+                    <div class="bg-gray-100 rounded-2xl h-56 mb-8 flex items-center justify-center p-6">
+                        <img src="assets/services_images/undraw_landing-page_zc5e.svg" alt="Landing Page" class="h-full object-contain group-hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-3">Landing Page</h3>
+                    <p class="text-gray-600 mb-8 leading-relaxed flex-grow">A high-converting, responsive single-page website to perfectly showcase your business or product.</p>
+                    <div class="flex items-center justify-between mt-auto">
+                        <div class="text-3xl font-black text-primary">3000 <span class="text-sm font-normal text-gray-500">EGP</span></div>
+                        <button onclick="addToCart('landing-page', 'Landing Page', 3000)" class="bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-xl font-bold transition duration-300 shadow-md">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-light p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition duration-300 flex flex-col group">
+                    <div class="bg-gray-100 rounded-2xl h-56 mb-8 flex items-center justify-center p-6">
+                        <img src="assets/services_images/undraw_social-media-interactions_5rls.svg" alt="Social Media Marketing" class="h-full object-contain group-hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-3">Social Media Marketing</h3>
+                    <p class="text-gray-600 mb-8 leading-relaxed flex-grow">Comprehensive campaign management across Facebook, Instagram, TikTok, and LinkedIn.</p>
+                    <div class="flex items-center justify-between mt-auto">
+                        <div class="text-3xl font-black text-primary">2500 <span class="text-sm font-normal text-gray-500">EGP/mo</span></div>
+                        <button onclick="addToCart('social-media', 'Social Media Marketing', 2500)" class="bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-xl font-bold transition duration-300 shadow-md">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-light p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition duration-300 flex flex-col group">
+                    <div class="bg-gray-100 rounded-2xl h-56 mb-8 flex items-center justify-center p-6">
+                        <img src="assets/services_images/undraw_mobile-application_uc2q.svg" alt="Mobile App Design" class="h-full object-contain group-hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-3">Mobile App UI/UX</h3>
+                    <p class="text-gray-600 mb-8 leading-relaxed flex-grow">Intuitive, modern, and user-friendly interface designs for your upcoming iOS or Android application.</p>
+                    <div class="flex items-center justify-between mt-auto">
+                        <div class="text-3xl font-black text-primary">4500 <span class="text-sm font-normal text-gray-500">EGP</span></div>
+                        <button onclick="addToCart('mobile-uiux', 'Mobile App UI/UX', 4500)" class="bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-xl font-bold transition duration-300 shadow-md">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-light p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition duration-300 flex flex-col group">
+                    <div class="bg-gray-100 rounded-2xl h-56 mb-8 flex items-center justify-center p-6">
+                        <img src="assets/services_images/undraw_video-tutorial_ly8k.svg" alt="Promo Video" class="h-full object-contain group-hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-3">30-Sec Promo Video</h3>
+                    <p class="text-gray-600 mb-8 leading-relaxed flex-grow">Engaging and dynamic 30-second promotional video to capture attention and tell your brand's story.</p>
+                    <div class="flex items-center justify-between mt-auto">
+                        <div class="text-3xl font-black text-primary">3500 <span class="text-sm font-normal text-gray-500">EGP</span></div>
+                        <button onclick="addToCart('promo-video', '30-Sec Promo Video', 3500)" class="bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-xl font-bold transition duration-300 shadow-md">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section class="py-24 bg-gray-50 border-t border-gray-100">
+        <div class="container">
+            
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-dark mb-4">Ready-Made Packages</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto text-lg">Save more with our bundled services carefully combined to achieve specific business goals.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                
+                <!-- Package 1 -->
+                <div class="bg-white p-8 md:p-10 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition duration-300 flex flex-col group">
+                    <h3 class="text-2xl font-bold text-dark mb-2">The Startup Bundle</h3>
+                    <div class="text-4xl font-black text-primary mb-4">5000 <span class="text-lg font-normal text-gray-500">EGP</span></div>
+                    <p class="text-gray-500 mb-8">Perfect for establishing a strong online presence from scratch.</p>
+                    <ul class="space-y-4 mb-10 text-gray-600 flex-grow">
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Domain & Hosting (1 Yr)</li>
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Landing Page Development</li>
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Basic Logo Design</li>
+                    </ul>
+                    <button onclick="addToCart('startup-bundle', 'The Startup Bundle', 5000)" class="w-full bg-gray-50 hover:bg-primary text-dark hover:text-white border border-gray-200 hover:border-primary py-4 rounded-xl font-bold text-lg transition duration-300 mt-auto">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <!-- Package 2 -->
+                <div class="bg-primary relative p-8 md:p-10 rounded-3xl border-2 border-primary shadow-xl hover:-translate-y-2 transition duration-300 flex flex-col group transform scale-105 z-10">
+                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-accent text-white px-6 py-1.5 rounded-full text-sm font-bold tracking-wider uppercase">Most Popular</div>
+                    <h3 class="text-2xl font-bold text-white mb-2">The Marketing Bundle</h3>
+                    <div class="text-4xl font-black text-white mb-4">7500 <span class="text-lg font-normal text-primary-200 text-gray-300">EGP</span></div>
+                    <p class="text-gray-300 mb-8">Drive traffic, engage users, and boost conversions with smart ads.</p>
+                    <ul class="space-y-4 mb-10 text-white flex-grow">
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Social Media Marketing</li>
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Landing Page Development</li>
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Ad Posters Design</li>
+                    </ul>
+                    <button onclick="addToCart('marketing-bundle', 'The Marketing Bundle', 7500)" class="w-full bg-white hover:bg-accent text-primary hover:text-white py-4 rounded-xl font-bold text-lg transition duration-300 mt-auto shadow-lg">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="bg-white p-8 md:p-10 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition duration-300 flex flex-col group">
+                    <h3 class="text-2xl font-bold text-dark mb-2">The Ultimate Bundle</h3>
+                    <div class="text-4xl font-black text-primary mb-4">12000 <span class="text-lg font-normal text-gray-500">EGP</span></div>
+                    <p class="text-gray-500 mb-8">The all-in-one digital transformation solution for serious businesses.</p>
+                    <ul class="space-y-4 mb-10 text-gray-600 flex-grow">
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Mobile App UI/UX Design</li>
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Landing Page Development</li>
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Social Media Marketing</li>
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> 30-Second Promo Video</li>
+                    </ul>
+                    <button onclick="addToCart('ultimate-bundle', 'The Ultimate Bundle', 12000)" class="w-full bg-gray-50 hover:bg-primary text-dark hover:text-white border border-gray-200 hover:border-primary py-4 rounded-xl font-bold text-lg transition duration-300 mt-auto">
+                        Add to Cart
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-gray-300 py-16 border-t border-slate-800">
+        <div class="container">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                
+                <div class="flex flex-col">
+                    <a href="index.html" class="text-3xl font-black text-white tracking-tighter mb-4">Orient<span class="text-accent">.</span></a>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Orient Software Development and Digital Services.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white text-lg font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="hover:text-primary transition duration-300">Home</a></li>
+                        <li><a href="about.html" class="hover:text-primary transition duration-300">About Us</a></li>
+                        <li><a href="services.html" class="text-primary transition duration-300">Services</a></li>
+                        <li><a href="about.html#contact-section" class="hover:text-primary transition duration-300">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white text-lg font-bold mb-6">Contact Information</h4>
+                    <ul class="space-y-4 mb-6">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-accent mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            <span class="text-sm">Qalyub, Qalyubia Governorate, Egypt</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <a href="mailto:Autopay22022@gmail.com" class="text-sm hover:text-white transition duration-300">Autopay22022@gmail.com</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            <a href="https://wa.me/201101791018" target="_blank" class="text-sm hover:text-white transition duration-300">+20 110 179 1018</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-gray-500">© 2026 Orient. All rights reserved.</p>
+                
+                <div class="flex gap-3">
+                    <a href="#" class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center hover:bg-primary text-gray-400 hover:text-white transition duration-300">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div id="floating-buttons" class="fixed bottom-6 right-6 flex flex-col gap-3 z-50 transition-all duration-500">
+        <a href="https://wa.me/201101791018" target="_blank" class="w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-[#25D366]/50 hover:scale-110 transition duration-300">
+            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+        </a>
+    </div>
+
+    <!-- Cart Drawer (Sidebar) -->
+    <div id="cart-drawer" class="fixed inset-y-0 right-0 w-full md:w-96 bg-white shadow-2xl z-[60] transform translate-x-full transition-transform duration-300 flex flex-col">
+        <!-- Header -->
+        <div class="flex items-center justify-between p-6 border-b border-gray-100">
+            <h2 class="text-xl font-bold text-dark flex items-center gap-2">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+                Your Cart
+            </h2>
+            <button id="cart-close-btn" class="p-2 text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-xl transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+
+        <!-- Cart Items Area -->
+        <div id="cart-items-container" class="flex-grow p-6 overflow-y-auto space-y-4">
+            <!-- Items will be injected here by JS -->
+        </div>
+
+        <!-- Footer / Checkout -->
+        <div id="cart-footer" class="p-6 border-t border-gray-100 bg-gray-50 hidden">
+            <div class="flex justify-between items-center mb-6">
+                <span class="text-gray-500 font-semibold">Total:</span>
+                <span id="cart-total-price" class="text-2xl font-black text-primary">0 EGP</span>
+            </div>
+            <button id="open-checkout-modal" class="w-full bg-primary hover:bg-accent text-white font-bold py-4 rounded-xl shadow-lg transition duration-300">
+                Proceed to Checkout
+            </button>
+        </div>
+    </div>
+
+    <!-- Overlay for Cart & Modal -->
+    <div id="ui-overlay" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-[55] hidden opacity-0 transition-opacity duration-300"></div>
+
+    <!-- Checkout Modal (Pop-up) -->
+    <div id="checkout-modal" class="fixed inset-0 z-[70] hidden items-center justify-center p-4 opacity-0 transition-opacity duration-300 overflow-y-auto">
+        <div class="bg-white rounded-3xl w-full max-w-lg shadow-2xl relative mt-10 md:mt-0 p-6 md:p-8">
+            <!-- Close Modal Btn -->
+            <button id="modal-close-btn" class="absolute top-4 right-4 p-2 text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-xl transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+
+            <h3 class="text-2xl font-bold text-dark mb-2">Complete Your Request</h3>
+            <p class="text-gray-500 text-sm mb-6">Fill in your details and we will contact you immediately.</p>
+
+            <form id="checkout-form" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">Full Name</label>
+                    <input type="text" id="client-name" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition" placeholder="John Doe">
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">Phone Number</label>
+                        <input type="tel" id="client-phone" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition" placeholder="+20 100 000 0000">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">Email Address</label>
+                        <input type="email" id="client-email" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition" placeholder="john@example.com">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">Project Details & Requirements</label>
+                    <textarea id="client-details" rows="4" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition resize-none" placeholder="Tell us more about what you need..."></textarea>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="pt-4 flex flex-col gap-3">
+                    <!-- Submit via Email -->
+                    <button type="button" id="submit-email-btn" class="w-full bg-primary hover:bg-indigo-700 text-white font-bold py-3.5 rounded-xl shadow-md transition duration-300 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        Confirm & Send Email
+                    </button>
+                    
+                    <!-- Submit via WhatsApp -->
+                    <button type="button" id="submit-wa-btn" class="w-full bg-[#25D366] hover:bg-[#1ebd5a] text-white font-bold py-3.5 rounded-xl shadow-md transition duration-300 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    Continue on WhatsApp
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
