@@ -35,24 +35,41 @@
 
     <!-- Navbar -->
     <nav class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="container py-4 flex justify-between items-center">
+        <div class="container py-4 flex justify-between items-center relative">
             <a href="index.html" class="text-3xl font-black text-primary tracking-tighter">Orient<span class="text-accent">.</span></a>
             
             <ul class="hidden md:flex gap-8 font-semibold items-center">
                 <li><a href="index.html" class="hover:text-primary transition duration-300">Home</a></li>
                 <li><a href="about.html" class="hover:text-primary transition duration-300">About Us</a></li>
-                <li><a href="services.html" class="text-primary transition duration-300">Services</a></li>
+                <li><a href="services.html" class="hover:text-primary transition duration-300">Services</a></li>
                 <li><a href="about.html#contact-section" class="hover:text-primary transition duration-300">Contact Us</a></li>
                 <li><a href="refund.html" class="hover:text-primary transition duration-300">Refund Policy</a></li>
                 <li><a href="terms.html" class="hover:text-primary transition duration-300">Terms & Conditions</a></li>
+            </ul>
+
+            <div class="flex items-center gap-2 md:gap-4">
                 
-                <!-- Cart Icon -->
-                <li>
-                    <button id="cart-open-btn" class="relative p-2 text-dark hover:text-primary transition duration-300 ml-4 group">
-                        <svg class="w-6 h-6 transform group-hover:scale-110 transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                        <span id="cart-badge" class="absolute top-0 right-0 bg-accent text-white text-[10px] font-bold rounded-full w-5 h-5 flex items-center justify-center translate-x-1 -translate-y-1 scale-0 transition-transform duration-300 shadow-sm border-2 border-white">0</span>
-                    </button>
-                </li>
+                <button id="cart-open-btn" class="relative p-2 text-dark hover:text-primary transition duration-300 group">
+                    <svg class="w-6 h-6 transform group-hover:scale-110 transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    <span id="cart-badge" class="absolute top-0 right-0 bg-accent text-white text-[10px] font-bold rounded-full w-5 h-5 flex items-center justify-center translate-x-1 -translate-y-1 scale-0 transition-transform duration-300 shadow-sm border-2 border-white">0</span>
+                </button>
+
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-dark hover:text-primary transition duration-300">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-lg transform transition-transform origin-top z-40">
+            <ul class="flex flex-col font-semibold p-4 space-y-4 text-center text-dark">
+                <li><a href="index.html" class="block hover:text-primary transition duration-300">Home</a></li>
+                <li><a href="about.html" class="block hover:text-primary transition duration-300">About Us</a></li>
+                <li><a href="services.html" class="block hover:text-primary transition duration-300">Services</a></li>
+                <li><a href="about.html#contact-section" class="block hover:text-primary transition duration-300">Contact Us</a></li>
+                <li><a href="refund.html" class="block hover:text-primary transition duration-300">Refund Policy</a></li>
+                <li><a href="terms.html" class="block hover:text-primary transition duration-300">Terms & Conditions</a></li>
             </ul>
         </div>
     </nav>
